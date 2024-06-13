@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>QuickDelivery</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <h2>Welcome to QuickDelivery</h2>
+            <p>Your reliable partner for fast and secure deliveries.</p>
+            <a href="#services" class="btn">Our Services</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service">
+                <h3>Same Day Delivery</h3>
+                <p>Fast and reliable delivery on the same day.</p>
+            </div>
+            <div class="service">
+                <h3>Express Delivery</h3>
+                <p>Guaranteed delivery within a few hours.</p>
+            </div>
+            <div class="service">
+                <h3>International Shipping</h3>
+                <p>Secure shipping across borders.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>QuickDelivery is dedicated to providing top-notch delivery services. With years of experience and a team of professionals, we ensure your packages are delivered safely and on time.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 QuickDelivery. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
