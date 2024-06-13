@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Define the log directory and the size threshold (10 MB)
+LOG_DIR="/var/log"
+SIZE_LIMIT=$((10 * 1024 * 1024)) # 10 MB in bytes
+
+# Get the size of the log directory
+LOG_DIR_SIZE=$(du -sb $LOG_DIR | cut -f1)
+
+# Check if the log directory size exceeds the limit
+if [ $LOG_DIR_SIZE -ge $SIZE_LIMIT ]; then
+    echo "Log directory size ($LOG_DIR_SIZE bytes) exceeds limit ($SIZE_LIMIT bytes). Deleting contents."
+    # Delete the contents of the log directory
+    rm -rf $LOG_DIR/*
+    echo "Log directory contents deleted."
+else
+    echo "Log directory size ($LOG_DIR_SIZE bytes) is within the limit."
+fi
+#chmod +x check_and_delete_logs.sh
+#sudo ./check_and_delete_logs.sh
+#sudo crontab -e
+#0 0 * * * /path/to/check_and_delete_logs.sh
+#Certainly! Below is a simple bash script that checks the size of the /var/log directory and deletes its contents if it exceeds 10 MB. Note that you need to run this script with appropriate permissions, typically as a superuser, to delete the log files
+
+
+
